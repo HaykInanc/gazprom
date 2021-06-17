@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<section id="main">
+		<h1>Налетай, торопись, покупай велосипед!</h1>
+		<div class="cards">
+			{% for product in data %}
+				<div>
+					<img src="{{ product['url'] }}">
+					<p>{{ product['text'] }}</p>
+					<button>Купить</button>
+				</div>
+	        {% endfor %}
+		</div>
+	</section>
+</body>
+</html>
