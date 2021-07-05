@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<section id="main">
+		<h1>Налетай, торопись, покупай велосипед!</h1>
+		<div class="cards">
+			<!-- в данной части шаблона используется цикл for, который проходится по всем элементам списка data, переданного из контроллера.
+
+			Данные из списка передаются в переменную product и формируется карточка с товаром, потом в product попадает следующее значение списка и так далее...
+			 -->
+			{% for product in data %}
+				<div>
+					<!-- подставляем ссылку на рактинку из переменной product -->
+					<img src="{{ product['url'] }}"> 
+					<!-- подставляем текст на рактинку из переменной product -->
+					<p>{{ product['text'] }}</p>
+					<button>Купить</button>
+				</div>
+			<!-- окончание цикла  -->
+	        {% endfor %}
+		</div>
+	</section>
+</body>
+</html>
